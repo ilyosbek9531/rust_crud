@@ -1,0 +1,20 @@
+[package]
+name = "online_store"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-cors = "0.7.0"
+actix-web = "4.4.1"
+bigdecimal = { version = "0.3.0", features = ["serde"] }
+chrono = { version = "0.4.31", features = ["serde"] }
+dotenv = "0.15.0"
+env_logger = "0.10.1"
+serde = { version = "1.0.195", features = ["derive"] }
+serde_json = "1.0.111"
+sqlx = { version = "0.6.3", features = ["runtime-async-std-native-tls", "postgres", "uuid", "chrono", "bigdecimal"] }
+uuid = { version = "1.6.1", features = ["serde", "v4"] }
+
+# DEPENDICIES SPECIFIC TO SWAGGER
+utoipa = { version = "4.2.0", features = ["actix_extras", "chrono"] }
+utoipa-swagger-ui = { version = "6.0.0", features = ["actix-web"] }
